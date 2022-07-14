@@ -1,0 +1,91 @@
+GIT E GITHUB
+
+GIT, é um software facilitador, criado em 2005, sistema de versionamento de código distribuído. Código aberto.
+
+* Benefícios:
+	-Controle de versão;
+	-Armazenamento em nuvem;
+	-Trabalho em time;
+	-Melhoramento de código;
+	-Reconhecimento;
+
+Tudo é responsivo git é CLI (LINHA DE COMANDO). GUI (interface grafica de usuario).
+ 
+COMANDOS WINDOWS
+
+-DIR , trás lista de diretórios existentes na máquina (ls no linux)
+-cd / , entra na pasta
+-cd + nome da pasta entra na pasta
+-cls - limpa o terminal
+-cd + tab completa as informações
+-mkdir , cria pasta
+-echo - printa no terminal um texto
+-> redirecionador de fluxo, pega saida de informação e joga dentro de outro lugar
+-del , deleta apenas arquivos e não diretorios
+-rmdir , remove repositorio – rm -rf no linux 
+/s /q flags
+
+
+COMO FUNCIONA O GIT
+
+*SHA1
+
+Algoritmo que faz funções de encriptação, gera conjunto de caracteres de 40 dígitos, para que seja possível identificar de forma rápida e será os arquivos.
+
+OBJETOS FUNDAMENTAIS
+
+blobs, 
+echo ‘conteudo’ | git hash-object – stdin, arquivos são guardados em blob, cntem meta dados do git. Guarda apenas o sha1
+
+trees,
+armazenam blobs, contem metadados \0. Guarda o nome do arquivo. e o sha1. Podem apontar para blobs ou outras trees. Tem o sha1 das arvores. uma mudança gera uma mudança geral.
+
+commits,
+objeto que une tudo, da sentido, aponta para arvores , parentes  , autor, mensagem, timestamp.(carimbo de tempo). possuem sha1. se qualquer dado for alterado, impacta toda a estrutura
+
+SISTEMAS DISTRIBUIDOS E SEGURO
+
+chave ssh - forma de conecxão segura entre duas maquinas, chave publica e privada
+
+pwd - mostra caminho da pasta que você está
+
+ssh-keygen -t ed25519 -C email.github@gm.com - cria chaves
+
+pastas q iniciam com . são pastas ocultas
+
+senha: ******
+
+cd /c/users/x/.ssh - acessa pasta
+
+cat id_ed***.pub - mostra a chave publica
+
+eval $(ssh-agente -s) cria o agente da chave
+
+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 - token git
+
+—--------------------------
+
+git init - inicia git
+git add- adiciona arquivos
+git commit - 
+
+ls -a mostra pastas ocultas
+arquivo markdown é a legibilidade do html
+
+
+***********
+GIT INIT
+inicializa o repositório
+tracked (rastreavel), unmodified não sofreu modificação, modified modificado, staged arquivos que estão se preparando para fazer parte de outros, commit.
+untracked  arquivo desconhecido
+commit retorna para unmodified, reinicia o processo.
+
+REPOSITÓRIO
+Alterações da maquina não impacta diretamente no servidor.
+working directory , staging area
+commit move arquivos do staging e muda eles para modified, e modula repository local. 
+Se não for commitado o arquivo nao pode subir para o repositoria remoto
+
+Git pull origin master, tenta unir as versões do repositório
+git push origin master, empurra a versão editado do repositorio para o git
+
