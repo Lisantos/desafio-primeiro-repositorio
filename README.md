@@ -1,2 +1,2 @@
 # desafio-primeiro-repositorio
-Desafio de projeto, sobre git / GitHub
+Repositório criado para o primeio desafio de projeto, sobre git / GitHub do Bootcamp Santander.
